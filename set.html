@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SET</title>
+    <!--Water.css styling-->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
+    /> -->
+    <!--Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="font-awesome3/css/all.css" />
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      $(document).ready(function () {
+        $(".menu").hide();
+      });
+      $(document).ready(function () {
+        $(".menu-button").click(function () {
+          $(".menu").fadeToggle();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="loader" class="loader"></div>
+    <div id="content" class="hidden">
+      <div class="container-fluid whole-body">
+        <!--LAUTECH LOGO-->
+        <div class="container-line">
+          <img src="lau.png" alt="" />
+          <button class="menu-button" type="button" style="float: right">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="menu">
+            <div class="container-line">
+              <h4>For other mathematical calculations</h4>
+              <p><a href="index.html">Geometric Progression (GP)</a></p>
+              <p><a href="ap_calc.html">Arithmetic Progression (AP)</a></p>
+              <p><a href="convert.html">Number Bases Converter</a></p>
+              <p><a href="statics_calc.html">Statistics</a></p>
+            </div>
+            <div>
+              <h4 style="text-decoration: underline">Some Notes</h4>
+              <p>
+                <a href="gpnote.html">Note on Geometric Progression (GP)</a>
+              </p>
+              <p>
+                <a href="apnote.html">Note on Arithmetic Progression (AP)</a>
+              </p>
+              <p><a href="numberbasenote.html">Note on Number Bases</a></p>
+              <p><a href="statisticnote.html">Note on Statistics</a></p>
+            </div>
+          </div>
+          <div>
+            <button id="theme-toggle">
+              <span class="theme-icon" id="themeIcon"></span>
+            </button>
+          </div>
+        </div>
+        <!--For Union-->
+        <div class="container-line">
+          <h3>SET Operation Calculator</h3>
+          <h4>Union of Two Sets</h4>
+
+          <div>
+            <label for="setAu"
+              >Enter numbers for Set A (comma-separated):</label
+            >
+            <input type="text" id="setAu" placeholder="e.g., 1, 2, 3, 4" />
+          </div>
+          <div>
+            <label for="setBu"
+              >Enter numbers for Set B (comma-separated):</label
+            >
+            <input type="text" id="setBu" placeholder="e.g., 3, 4, 5, 6" />
+          </div>
+          <button id="calculateUnion">Calculate Union</button>
+          <div class="my-answers">
+            <div id="resultUnion"></div>
+            <div id="stepsUnion"></div>
+          </div>
+        </div>
+
+        <!--For Intersection-->
+        <div class="container-line">
+          <h4>Intersection of Two Sets</h4>
+          <div>
+            <label for="setAi"
+              >Enter numbers for Set A (comma-separated):</label
+            >
+            <input type="text" id="setAi" placeholder="e.g., 1, 2, 3, 4" />
+          </div>
+          <div>
+            <label for="setBi"
+              >Enter numbers for Set B (comma-separated):</label
+            >
+            <input type="text" id="setBi" placeholder="e.g., 3, 4, 5, 6" />
+          </div>
+          <button id="calculateIntersect">Calculate Intersection</button>
+          <div class="my-answers">
+            <div id="resultIntersect"></div>
+            <div id="stepsIntersect"></div>
+          </div>
+        </div>
+        <!--For Power set-->
+        <div class="container-line">
+          <h4>Power Set</h4>
+          <div>
+            <label for="set">Enter numbers for Set (comma-separated):</label>
+            <input
+              type="text"
+              id="setPowerset"
+              placeholder="e.g., 1, 2, 3, 4"
+            />
+          </div>
+
+          <button id="calculatePowerset">Calculate Intersection</button>
+          <div class="my-answers">
+            <div id="resultPowerset"></div>
+            <div id="stepsPowerset"></div>
+          </div>
+        </div>
+        <!--For Complement-->
+        <div class="container-line">
+          <h4>Complement of a Set</h4>
+
+          <div>
+            <label for="universalSetInput"
+              >Enter the universal set (comma-separated):</label
+            >
+            <input
+              type="text"
+              id="universalSetInput"
+              placeholder="e.g., 1, 2, 3, 4, 5"
+            />
+          </div>
+          <div>
+            <label for="setInput">Enter the set A (comma-separated):</label>
+            <input type="text" id="setInput" placeholder="e.g., 2, 3" />
+          </div>
+          <button id="calculateComplemet">Calculate Complement</button>
+          <div class="my-answers">
+            <div id="resultComplemet"></div>
+            <div id="stepsComplemet"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="set.js"></script>
+    <script src="general.js"></script>
+  </body>
+</html>

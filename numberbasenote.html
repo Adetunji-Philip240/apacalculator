@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Base System</title>
+
+    <!--Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="font-awesome3/css/all.css" />
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!--External CSS-->
+    <link rel="stylesheet" href="style.css" />
+
+    <script>
+      $(document).ready(function () {
+        $(".menu").hide();
+      });
+      $(document).ready(function () {
+        $(".menu-button").click(function () {
+          $(".menu").fadeToggle();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="loader" class="loader"></div>
+    <div id="content" class="hidden">
+      <div class="container-fluid">
+        <!--LAUTECH LOGO-->
+        <div class="container-line">
+          <img src="lau.png" alt="" />
+          <button class="menu-button" type="button" style="float: right">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="menu">
+            <div class="container-line">
+              <h4>For mathematical calculations</h4>
+              <p><a href="index.html">Geometric Progression (GP)</a></p>
+              <p><a href="ap_calc.html">Arithmetic Progression (AP)</a></p>
+              <p><a href="convert.html">Number Bases Converter</a></p>
+              <p><a href="statics_calc.html">Statistics</a></p>
+              <p><a href="set.html">Set</a></p>
+            </div>
+            <div>
+              <h4 style="text-decoration: underline">Some Notes</h4>
+              <p>
+                <a href="gpnote.html">Note on Geometric Progression (GP)</a>
+              </p>
+              <p>
+                <a href="apnote.html">Note on Arithmetic Progression (AP)</a>
+              </p>
+              <p><a href="statisticnote.html">Note on Statistics</a></p>
+            </div>
+          </div>
+          <div>
+            <span class="theme-go-back">
+              <button id="theme-toggle">
+                <span class="theme-icon" id="themeIcon"></span>
+              </button>
+              <a style="color: white" href="numberbasequiz.html">
+                <button>Attempt Quiz</button>
+              </a>
+            </span>
+          </div>
+        </div>
+        <div>
+          <h2 style="text-decoration: underline; font-weight: bolder">
+            Number Base System
+          </h2>
+          <p>
+            In the case of a positional numeral system, a base refers to the
+            total number of unique digits that we use to represent all the
+            numbers. It also includes the digit zero. Now, for instance, for a
+            decimal system, the base number is ten. It is because it utilises
+            the ten digits ranging from 0 to 9.
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            What is the Base of the Number System?
+          </h4>
+          <p>
+            The base of a number system refers to the total number of digits
+            that are actually used in the given number system. The number system
+            that has the base ‘b’ consists of its digits in the [0, b-1] range.
+            This base of the number system is also known as the radix of a
+            number system. Let us take a look at a few examples to understand
+            this better.
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Examples
+          </h4>
+          <p>We will now consider the examples given below-</p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Number System with Base 10
+          </h4>
+          <p>
+            Let us consider a base 10 number system, normally known as a decimal
+            number system, here: The total number of digits that are used in
+            this number system is 10 since it has a base of 10. Thus, these
+            digits would be 0, 1, 2, 3, 4, 5, 6, 7, 8, 9. The digits here lie
+            clearly in the [0, base-1] range = [0, 9].
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Number System with Base 2
+          </h4>
+          <p>
+            Let us consider a base 2 number system normally known as a binary
+            number system, here: The total number of digits that are used in
+            this number system is 2 since it has a base of 2. Thus, these digits
+            would be 0 and 1. The digits here lie clearly in the [0, base-1]
+            range = [0, 1].
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Important Note
+          </h4>
+          <p>
+            It is critical to note that: The digits of a number system that has
+            the base ‘b’ will always be less than ‘b’. It is clear from the [0,
+            base-1] range in which all the digits of a number system lie.
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Types of Number System
+          </h4>
+          <p>
+            The four most generally used number systems are these: 1. Decimal 2.
+            Binary 3. Octal 4. Hexadecimal The table given below shows what
+            bases and digits are used in these mentioned number systems:
+          </p>
+          <table style="font-size: 2vw" class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Number System</th>
+                <th>Digits Used</th>
+                <th>Base</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Decimal Number System</td>
+                <td>(Total 10 digits) 0, 1, 2, 3, 4, 5, 6, 7, 8, 9</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td>Binary Number System</td>
+                <td>(Total 2 digits) 0, 1</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Octal Number System</td>
+                <td>(Total 8 digits) 0, 1, 2, 3, 4, 5, 6, 7</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <td>Hexadecimal Number System</td>
+                <td>
+                  (Total 16 digits) 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E,
+                  F
+                </td>
+                <td>16</td>
+              </tr>
+            </tbody>
+          </table>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Conversion to Base 10
+          </h4>
+          <p>
+            In the case of number systems, it is very crucial that one has a
+            thorough knowledge of how one can convert various numbers from a
+            given base to another one. In this article, we will learn how we can
+            convert some numbers from any available base to base 10.
+            <br />
+            We can convert a number from a base to base 10 with the help of the
+            expansion method. Now, according to the expansion method, if mno.pq
+            is a given number in base x, its value in base 10 will be like this:
+            <br />
+            (mno.pq)x = (mx2 + nx + o + px-1 + qx-2)10
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Explanation
+          </h4>
+          <p>
+            If we want to use the expansion method for the process of
+            conversion, then:
+          </p>
+          <ul>
+            <li>
+              Assign the position number to every digit of the available number.
+            </li>
+            <li>
+              The digits available at the left of the decimal are numbered from
+              0.
+            </li>
+            <li>
+              The digits available at the right of the decimal are numbered from
+              -1.
+            </li>
+            <li>
+              Write a certain term for every digit as digit x (which is the base
+              of the given number), the digit’s position number.
+            </li>
+            <li>Add all the terms so as to get the number in base 10.</li>
+            <li>We can expand this formula for any given number of digits.</li>
+          </ul>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Practice Problems on Conversion to Base 10
+          </h4>
+          <p>
+            1. Convert the given numbers to base 10-
+            <br />
+            1.1. (10010)<sub>2</sub>
+            <br />
+            Answer – We use the expansion method here and we get-
+            <br />
+            (10010)<sub>2</sub>
+            <br />
+            = ( 1 x 2<sup>4</sup> + 0 x 2<sup>3</sup> + 0 x 2<sup>2</sup> + 1 x
+            2<sup>1</sup> + 0 x 2<sup>0</sup> )<sub>10</sub>
+            <br />
+            = ( 16 + 0 + 0 + 2 + 0 )<sub>10</sub>
+            <br />
+            = ( 18 )<sub>10</sub>
+            <br />
+            1.2. (254)<sub>8</sub>
+            <br />
+            Answer – We use the expansion method here and we get-
+            <br />
+            (254)<sub>8</sub>
+            <br />
+            = ( 2 x 8<sup>2</sup> + 5 x 8<sup>1</sup> + 4 x 8<sup>0</sup> )<sub
+              >10</sub
+            >
+            <br />
+            = ( 128 + 40 + 4 )<sub>10</sub>
+            <br />
+            = ( 172 )<sub>10</sub>
+            <br />
+            1.3. (AC)<sub>16</sub>
+            <br />
+            Answer – We use the expansion method here and we get-
+            <br />
+            (AC)<sub>16</sub>
+            <br />
+            = ( A x 16<sup>1</sup> + C x 16<sup>0</sup> )<sub>10</sub>
+            <br />
+            = ( 10 x 16 + 12 x 1 )<sub>10</sub>
+            <br />
+            = ( 160 + 12 )<sub>10</sub>
+            <br />
+            = ( 172 )<sub>10</sub>
+            <br />
+            1.4. (10010.101)<sub>2</sub>
+            <br />
+            Answer – We use the expansion method here and we get-
+            <br />
+            (10010.101)<sub>2</sub>
+            <br />
+            = ( 1 x 2<sup>4</sup> + 0 x 2<sup>3</sup> + 0 x 2<sup>2</sup> + 1 x
+            2<sup>1</sup> + 0 x 2<sup>0</sup> + 1 x 2<sup>-1</sup> + 0 x 2<sup
+              >-2</sup
+            >
+            + 1 x 2<sup>-3</sup> )<sub>10</sub>
+            <br />
+            = ( 16 + 0 + 0 + 2 + 0 + 0.5 + 0.125 )<sub>10</sub>
+            <br />
+            = ( 18.625 )<sub>10</sub>
+            <br />
+            1.5. (254.7014)<sub>8</sub>
+            <br />
+            Answer – We use the expansion method here and we get-
+            <br />
+            (254.7014)<sub>8</sub>
+            <br />
+            = ( 2 x 8<sup>2</sup> + 5 x 8<sup>1</sup> + 4 x 8<sup>0</sup> + 7 x
+            8<sup>-1</sup> + 0 x 8<sup>-2</sup> + 1 x 8<sup>-3</sup> + 4 x 8<sup
+              >-4</sup
+            >
+            )<sub>10</sub>
+            <br />
+            = ( 128 + 40 + 4 + 0.875 + 0.0019 + 0.0009 )<sub>10</sub>
+            <br />
+            = ( 172.8778 )<sub>10</sub>
+            <br />
+            1.6. (AC.FBA5)<sub>16</sub>
+            <br />
+            Answer – We use the expansion method here and we get-
+            <br />
+            (AC.FBA5)<sub>16</sub>
+            <br />
+            = ( A x 16<sup>1</sup> + C x 16<sup>0</sup> + F x 16<sup>-1</sup> +
+            B x 16<sup>-2</sup> + A x 16<sup>-3</sup> + 5 x 16<sup>-4</sup>
+            )<sub>10</sub>
+            <br />
+            = ( 10 x 16 + 12 x 1 + 15 x 16<sup>-1</sup> + 11 x 16<sup>-2</sup> +
+            10 x 16<sup>-3</sup> + 5 x 16<sup>-4</sup> )<sub>10</sub>
+            <br />
+            = ( 160 + 12 + 0.9375 + 0.0429 + 0.0024 + 0.0001 )<sub>10</sub>
+            <br />
+            = ( 172.9829 )<sub>10</sub>
+            <br />
+            1.7. (0.1402)<sub>8</sub>
+            <br />
+            Answer – We use the expansion method here and we get-
+            <br />
+            (0.1402)<sub>8</sub>
+            <br />
+            = ( 0 x 8<sup>0</sup> + 1 x 8<sup>-1</sup> + 4 x 8<sup>-2</sup> + 0
+            x 8<sup>-3</sup> + 2 x 8<sup>-4</sup> )<sub>10</sub>
+            <br />
+            = ( 0 + 0.125 + 0.0625 + 0 + 0.0005 )<sub>10</sub>
+            <br />
+            = ( 0.188 )<sub>10</sub>
+            <br />
+            1.8. (0.ABDF)<sub>16</sub>
+            <br />
+            Answer – We use the expansion method here and we get-
+            <br />
+            (0.ABDF)<sub>16</sub>
+            <br />
+            = ( 0 x 16<sup>0</sup> + A x 16<sup>-1</sup> + B x 16<sup>-2</sup> +
+            D x 16<sup>-3</sup> + F x 16<sup>-4</sup> )<sub>10</sub>
+            <br />
+            = ( 0 x 1 + 10 x 16<sup>-1</sup> + 11 x 16<sup>-2</sup> + 13 x
+            16<sup>-3</sup> + 15 x 16<sup>-4</sup> )<sub>10</sub>
+            <br />
+            = ( 0 + 0.625 + 0.0429 + 0.0032 + 0.0002 )<sub>10</sub>
+            <br />
+            = ( 0.6713 )<sub>10</sub>
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Hexadecimal Number System
+          </h4>
+          <p>
+            The hexadecimal number system is a type of number system, that has a
+            base value equal to 16. It is also pronounced sometimes as ‘hex’.
+            Hexadecimal numbers are represented by only 16 symbols. These
+            symbols or values are 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E
+            and F. Each digit represents a decimal value. For example, D is
+            equal to base-10 13.
+          </p>
+          <p>
+            The list of 16 hexadecimal digits with their equivalent decimal,
+            octal and binary representation is given here in the form of a
+            table, which will help in number system conversion. This list can be
+            used as a translator or converter also.
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Hexadecimal Number System Table
+          </h4>
+          <p>
+            Below is the table of hexadecimal number systems with equivalent
+            values of the binary and decimal number systems.
+          </p>
+          <table class="table table-dark">
+            <thead>
+              <tr>
+                <th>Decimal Numbers</th>
+                <th>4-bit Binary Number</th>
+                <th>Hexadecimal Number</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0</td>
+                <td>0000</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>0001</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>0010</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>0011</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>0100</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>0101</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>0110</td>
+                <td>6</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>0111</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>1000</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>1001</td>
+                <td>9</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>1010</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>1011</td>
+                <td>B</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>1100</td>
+                <td>C</td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>1101</td>
+                <td>D</td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>1110</td>
+                <td>E</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>1111</td>
+                <td>F</td>
+              </tr>
+            </tbody>
+          </table>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Basic Operations in Number Bases
+          </h4>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Addition:
+          </h4>
+          <p>
+            This is done by writing the remaining value when the number base or
+            its multiple is taken from a number while the number of such base is
+            transferred to another digit as a whole number
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Examples:
+          </h4>
+          <p>
+            1. Add in base ten: 639 + 683 <br />Solution: <br />First, add the 9
+            and the 3 in the units column, giving 12. Twelve is one set of ten
+            plus 2, so place the 2 in the answer line in the units column and
+            carry the 1 for one set of ten to the tens column.
+          </p>
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb1.png"
+            alt="nb1"
+          />
+          <p>
+            Then, add the numbers in the tens column, giving 12. This is 10 sets
+            of 10 plus 2 sets of ten. Place the 2 in the answer line in the tens
+            column and carry a one to the hundreds column since 10 sets of 10 is
+            one set of 100.
+          </p>
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb2.png"
+            alt="nb1"
+          />
+          <p>
+            Finally, add the numbers in the hundreds column, giving 13. This is
+            10 sets of 100 plus 3 sets of 100. The 3 sets of 100 is a 3 in the
+            hundreds column in the answer line. The 10 sets of 100 is one set of
+            1000, so this 1 goes in the thousands column in the answer.
+          </p>
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb3.png"
+            alt="nb1"
+          />
+          <p>The final answer is 1322.</p>
+          <p>
+            The same “carrying” technique can be used to add multi-digit numbers
+            in a place value system with any base. However, remember that in a
+            base b, we carry one group of b over to the next place instead of
+            one group of ten. Considering our example of 6 plus 7, 6<sub>8</sub>
+            + 7<sub>8</sub>is one group of 8 with 5 left over, or 6<sub>8</sub>
+            + 7<sub>8</sub> = 15<sub>8</sub> .
+          </p>
+          <p>
+            2. Add in base 7: 153<sub>7</sub> + 216<sub>7</sub> <br />
+            Solution: <br />
+            First, write the addition problem in column form. Adding starts with
+            the units column on the right just as in base ten. Since 3 + 6 = 9
+            and 9 is one set of 7 plus 2 extras units, the 2 goes in the units
+            column of the answer line and the one set of 7 is “carried over” to
+            the next column of sets of 7.
+          </p>
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb4.png"
+            alt="nb1"
+          />
+          <p>
+            Next, add the numbers in the seven's column, 1 + 1 + 5 = 7. Since
+            seven sets of seven is one set of 49 with nothing left over, carry
+            the 1 to the next column over and put a 0 in the answer line in the
+            second column.
+          </p>
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb5.png"
+            alt="nb1"
+          />
+          <p>Then add the numbers in the left column, 1 + 1 + 2 = 4</p>
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb6.png"
+            alt="nb1"
+          />
+          <p>
+            Since this number is less than 7, there is no need to carry anything
+            to the next column, and our answer is 402<sub>7</sub>
+          </p>
+          <p>
+            3. Add in base 16: A28<sub>16</sub> + 739<sub>16</sub> <br />
+            Solution: <br />
+            First, write the addition problem in column form. Then add the
+            numbers in the rightmost column. Since 8 + 9 is 17, which is one set
+            of 16 plus 1 left over, write the remainder 1 in the answer line
+            under the right column and add the 1 set of 16 to the next column.
+          </p>
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb7.png"
+            alt="nb1"
+          />
+          <p>
+            Next, add the second column. Since 1 + 2 + 3 is 6 which is less than
+            16, simply put the 6 in the answer line for the second column.
+          </p>
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb8.png"
+            alt="nb1"
+          />
+          <p>
+            Finally, add A + 7 . From the base 16 chart earlier in this section,
+            we know that A represents the Hindu-Arabic number 10. Since 10 + 7 =
+            17 which is one set of 16 plus 1, put the remainder 1 under the A
+            and 7 column. Place the one set of 16 as the first digit in the
+            answer.
+          </p>
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb9.png"
+            alt="nb1"
+          />
+          <p>Thus, A28<sub>16</sub> + 739<sub>16</sub> = 1161<sub>16</sub></p>
+          <p>
+            4. Add in base 2: 11011<sub>2</sub> + 101101<sub>2</sub> <br />
+            Solution: <br />
+            Adding column by column staring with the units column on the right,
+            and carrying a set of two to the next column, the addition is shown
+            below.
+          </p>
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb10.png"
+            alt="nb1"
+          />
+          <p>
+            Thus, 11011<sub>2</sub> + 101101<sub>2</sub> = 1001000<sub>2</sub>
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Subtraction:
+          </h4>
+          <p>
+            The algorithm used for subtraction of multi-digit numbers is the
+            borrowing algorithm that reverses the “carrying” procedure for
+            addition.
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Examples:
+          </h4>
+          <p>
+            1. Subtract 223 – 186. <br />Solution <br />
+            First write the problem in column form. Remember that we start by
+            subtracting the numbers in the units column. Since 3 is smaller than
+            6, we cannot directly subtract and get a positive answer. Therefore,
+            we “borrow” one set of ten from the tens column and break it up into
+            10 units. Adding those ten units to the three already there gives
+            thirteen. Then, we can easily subtract 13 – 6.
+          </p>
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb11.png"
+            alt="nb1"
+          />
+          <p>
+            Since we borrowed one of the two sets of ten in the tens column, we
+            only have one set left. This is why the 2 in the middle column is
+            scratched out and the one left is written above it. The next step is
+            to subtract the numbers in the tens column. As before, we cannot
+            subtract 1 – 8 and get a positive answer. So, we borrow one set of
+            100 from the hundreds column and break it up into ten sets of 10.
+            This gives 10 + 1 = 11 sets of ten for the top number in the tens
+            column. Now we subtract 11 – 8 = 3. Since we borrowed one set of
+            100, we now only have 1 set of 100 in the hundreds column for the
+            top number. This is why the 2 is crossed out with a one on top of
+            it.
+          </p>
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb12.png"
+            alt="nb1"
+          />
+          <p>Finally, subtract the hundreds column.</p>
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb13.png"
+            alt="nb1"
+          />
+          <p>
+            Leading zeroes do not change a number, so the answer is simply 37.
+          </p>
+          <p>
+            The basic concept is to “regroup” the larger number so that the
+            subtraction is reduced to subtraction between the digits in each
+            place of the two numbers. This same procedure works for subtracting
+            numbers in any place value system.
+          </p>
+          <p>
+            2. Subtract in base 7: 536<sub>7</sub> - 245<sub>7</sub> <br />
+            Solution: <br />
+            To subtract, first write the problem in column form.
+          </p>
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb14.png"
+            alt="nb1"
+          />
+          <p>
+            Begin subtracting with the units place. Since 6 is bigger than 5, we
+            can simply subtract and record our answer in the answer line.
+          </p>
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb15.png"
+            alt="nb1"
+          />
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb16.png"
+            alt="nb1"
+          />
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb17.png"
+            alt="nb1"
+          />
+          <p>The final answer is 261<sub>7</sub></p>
+          <p>
+            3. Subtract in base 5: 1423<sub>5</sub> - 424<sub>5</sub>.
+            <br />Solution <br />First, write the problem in column form:
+          </p>
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb18.png"
+            alt="nb1"
+          />
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb19.png"
+            alt="nb1"
+          />
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb20.png"
+            alt="nb1"
+          />
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb21.png"
+            alt="nb1"
+          />
+          <p>The final answer is 444<sub>5</sub></p>
+          <p>
+            4. Subtract in base 16: 5B2<sub>16</sub> - 17C<sub>16</sub>. <br />
+            Solution <br />
+            Write the problem in column form. Also look up B and C on the base
+            16 chart and find B = 11 and C = 12 .
+          </p>
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb22.png"
+            alt="nb1"
+          />
+          <p>
+            Since 2 is smaller than C, we must borrow one set of 16 from the
+            16<sup>1</sup> column to be able to subtract in the units column.
+            Borrowing 1 from B leaves 11 - 1 = 10 = A sets of 16 left. Adding
+            the 16 to the 2 in the units column gives 18 - 12 = 6.
+          </p>
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb23.png"
+            alt="nb1"
+          />
+          <p>
+            The remainder of the subtraction may be performed without any
+            borrowing.
+          </p>
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb24.png"
+            alt="nb1"
+          />
+          <p>The final answer is 436<sub>16</sub></p>
+          <p>
+            5. Subtract in base 2: 110111<sub>2</sub> - 11001<sub>2</sub> <br />
+            Solution <br />
+            First, write the problem in column form.
+          </p>
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb25.png"
+            alt="nb1"
+          />
+          <p>
+            Next, begin subtracting from the units place on the right. If the
+            top digit is larger than the bottom digit, simply subtract.
+          </p>
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb26.png"
+            alt="nb1"
+          />
+          <p>
+            The procedure works the same way in any base, so at this point we
+            need to borrow from the next column. Just remember that in base 2 we
+            are borrowing sets of 2 and multiples of 2. The rest of the
+            subtraction is below.
+          </p>
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb27.png"
+            alt="nb1"
+          />
+          <p>The final answer is 11110<sub>2</sub></p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Multiplication:
+          </h4>
+          <p>
+            One of the challenges of elementary school is to learn the
+            multiplication table up to ten times ten. This is actually a
+            complicated task. First, the student must understand that
+            multiplication is faster addition and 8 X 9 is the number of total
+            objects in 8 sets of 9 things each. Then, the student has to express
+            this quantity as a base ten number. Since 8 sets of 9 things do not
+            “naturally” separate themselves into 7 sets of ten plus 2 left over,
+            learning these facts takes a significant amount of memorization.
+            Fortunately, once these facts are mastered, the algorithm for
+            multiplying multi-digit numbers is not much harder than the
+            procedure for addition.
+          </p>
+          <p>
+            Multiplication in other bases uses a similar algorithm. The first
+            step is to determine the products of all the single digits express
+            as numbers in the base.
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Examples:
+          </h4>
+          <p>
+            1. Multiply 32<sub>8</sub> X 5<sub>8</sub> <br />
+            Solution <br />
+            First write the multiplication problem in column form.
+          </p>
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb28.png"
+            alt="nb1"
+          />
+          <p>
+            Begin by multiplying the units digits. By the base 8 multiplication
+            table, 5<sub>8</sub> X 2<sub>8</sub> = 12<sub>8</sub>. This is one
+            set of 8 plus 2 extra. The 2 goes in the units column of the answer.
+            The 1 set of 8 is placed above the 8<sup>1</sup> column.
+          </p>
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb29.png"
+            alt="nb1"
+          />
+          <p>
+            The next step is to multiply 3<sub>8</sub> X 5<sub>8</sub> = 17<sub
+              >8</sub
+            >
+            Adding the one from the units multiplication gives 17<sub>8</sub> X
+            1<sub>8</sub> = 20<sub>8</sub>. The 20 is what goes in the answer
+            line.
+          </p>
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb30.png"
+            alt="nb1"
+          />
+          <p>The final answer is 202<sub>8</sub>.</p>
+          <p>
+            2. Multiply 221<sub>3</sub> X 2<sub>3</sub> <br />
+            Solution <br />
+            Write the problem in column form and begin by multiplying the units
+            digits
+          </p>
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb31.png"
+            alt="nb1"
+          />
+          <p>
+            Next, multiplying in the 3<sup>1</sup> column gives 2<sub>3</sub> X
+            2<sub>3</sub> = 11<sub>3</sub>. The units digit of this answer goes
+            in the 3<sup>1</sup> column place in the answer, the 3’s digit gets
+            carried over to the next column and added to the multiplication
+            result.
+          </p>
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb32.png"
+            alt="nb1"
+          />
+          <p>
+            Multiplying in the 3<sup>2</sup> column and adding the extra 1 is
+            2<sub>3</sub> X 2<sub>3</sub> + 1<sub>3</sub> = 11<sub>3</sub> +
+            1<sub>3</sub>
+            = 12<sub>3</sub>. The 12 is what finishes the answer line.
+          </p>
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="number_base/nb33.png"
+            alt="nb1"
+          />
+          <p>The final answer is 1212<sub>3</sub></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="general.js"></script>
+  </body>
+</html>

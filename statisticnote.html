@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Statistics</title>
+
+    <!--Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="font-awesome3/css/all.css" />
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!--External CSS-->
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      table {
+        text-align: center;
+      }
+    </style>
+
+    <script>
+      $(document).ready(function () {
+        $(".menu").hide();
+      });
+      $(document).ready(function () {
+        $(".menu-button").click(function () {
+          $(".menu").fadeToggle();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="loader" class="loader"></div>
+    <div id="content" class="hidden">
+      <div class="container-fluid">
+        <!--LAUTECH LOGO-->
+        <div class="container-line">
+          <img src="lau.png" alt="" />
+          <button class="menu-button" type="button" style="float: right">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="menu">
+            <div class="container-line">
+              <h4>For mathematical calculations</h4>
+              <p><a href="index.html">Geometric Progression (GP)</a></p>
+              <p><a href="ap_calc.html">Arithmetic Progression (AP)</a></p>
+              <p><a href="convert.html">Number Bases Converter</a></p>
+              <p><a href="statics_calc.html">Statistics</a></p>
+              <p><a href="set.html">Set</a></p>
+            </div>
+            <div>
+              <h4 style="text-decoration: underline">Some Notes</h4>
+              <p>
+                <a href="gpnote.html">Note on Geometric Progression (GP)</a>
+              </p>
+              <p>
+                <a href="apnote.html">Note on Arithmetic Progression (AP)</a>
+              </p>
+              <p><a href="numberbasenote.html">Note on Number Bases</a></p>
+            </div>
+          </div>
+          <div>
+            <span class="theme-go-back">
+              <button id="theme-toggle">
+                <span class="theme-icon" id="themeIcon"></span>
+              </button>
+              <a style="color: white" href="#">
+                <button onclick="alert('The page is under development')">
+                  Attempt Quiz
+                </button>
+              </a>
+            </span>
+          </div>
+        </div>
+        <div>
+          <h2 style="text-decoration: underline; font-weight: bolder">
+            Statistics
+          </h2>
+          <p>
+            Statistics is the science of collecting, organizing and analyzing
+            data for any given purpose. It helps us to reduce large and
+            scattered data to an understandable level, thereby enabling us to
+            make decisions in the face of uncertainty.
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Array
+          </h4>
+          <p>
+            This is the arrangement of raw numerical data in ascending or
+            descending order of magnitude. For example, given the data: 3, 5,
+            10, 0, 1, 8, 10, 4, 2, 6. <br />Ascending Order: 0, 1, 2, 3, 4, 5,
+            6, 8, 10, 10 <br />
+            Descending Order: 10, 10, 8, 6, 5, 4, 3, 2, 1, 0
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Frequency & Tally
+          </h4>
+          <p>
+            <span style="font-weight: bold">Frequency:</span> this is the number
+            of occurences of any value in a given data while tally is the stroke
+            representation of frequency.
+          </p>
+          <img
+            style="width: 100%"
+            height="100vh"
+            src="statistics/tallynumb.png"
+            alt="statistics"
+          />
+          <p>
+            <span style="font-weight: bold">Example:</span> 20 pupils were asked
+            about their favourite type of movie <br />
+            <span style="font-weight: bold">Solution</span>
+          </p>
+          <img
+            style="width: 100%"
+            height="300vh"
+            src="statistics/tally.png"
+            alt="statistics"
+          />
+          <p>
+            The centrality and spread of any given data are of great importance
+            to statistians.
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Measure of Central Tendency (measure of location)
+          </h4>
+          <p>
+            Measure of central tendency can be thought of as a measure which
+            gives the location of the "center" of the data. The most commonly
+            used ones are the mean, media and mode.
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Mean
+          </h4>
+          <p>
+            The mean (arithmetic mean) denoted by
+            <span style="text-decoration: overline">x</span> (x bar) of a set of
+            n numbers x<sub>1</sub>, x<sub>2</sub> ... x<sub>n</sub> is <br />
+            <span style="text-decoration: overline">x</span> = (x<sub>1</sub>,
+            x<sub>2</sub> ... x<sub>n</sub>) / n <br />
+            <span style="text-decoration: overline">x</span> = ∑x / n (where ∑
+            is summation)
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Examples:
+          </h4>
+          <p>1. Find the mean of the numbers, 1, 3, 4, 8, 8, 4, 7</p>
+          <p>
+            Solution: <br />
+            Mean (<span style="text-decoration: overline">x</span>) = ∑x / n
+            <br />
+            = (1 + 3 + 4 + 8 + 8 + 4 + 7) / 7 <br />
+            = 35 / 7 <br />
+            = 5
+          </p>
+          <p>
+            2. The weight of 5 girls in kg are 48, x, 52, 50 and (2x - 5). If
+            their average weight is 47kg. Find the weight of the girl that has
+            the heaviest weight
+          </p>
+          <p>
+            Solution: <br />
+            Note: Average weight = Mean <br />
+            Average weight = sum of weight / number of grils <br />
+            47 = (48 + x + 52 + 50 + (2x - 5)) / 5 <br />
+            Cross Multiplying <br />
+            47 X 5 = 150 + x + 2x - 5 <br />
+            235 = 145 + 3x <br />
+            Collect like terms <br />
+            235 - 145 = 3x <br />
+            90 = 3x <br />
+            Divide both sides by the coefficient of x (i.e 3) <br />
+            90/3 = (3x)/3 <br />
+            So, x = 30 <br />
+            Next, we list the weight by substituting the value of x <br />
+            48, 30, 52, 50, (2 X 30 - 5) <br />
+            = 48, 30, 52, 50, 55 <br />
+            Thus the heaviest weight is 55kg.
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Mean of frequency distribution
+          </h4>
+          <p>
+            For any given data say x<sub>1</sub>, x<sub>2</sub> ... x<sub
+              >k</sub
+            >
+            that occur f<sub>1</sub>, f<sub>2</sub> ... f<sub>k</sub> times
+            respectively, then the mean <br />
+            <span style="text-decoration: overline">x</span> =
+            (f<sub>1</sub>x<sub>1</sub> + f<sub>2</sub>x<sub>2</sub> + ...
+            f<sub>k</sub>x<sub>k</sub>) / f<sub>1</sub> + f<sub>2</sub> ... +
+            f<sub>k</sub> <br />
+            = ∑fx / ∑f
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Examples:
+          </h4>
+          <p>
+            1. Calculate the mean of the distribution of the test scores below:
+          </p>
+          <table class="table table-striped table-bordered">
+            <tr>
+              <td>Scores</td>
+              <td>30</td>
+              <td>35</td>
+              <td>40</td>
+              <td>45</td>
+              <td>50</td>
+            </tr>
+            <tr>
+              <td>No. of student</td>
+              <td>3</td>
+              <td>21</td>
+              <td>46</td>
+              <td>18</td>
+              <td>12</td>
+            </tr>
+          </table>
+          <p>
+            Solution: <br />
+            Mean = ∑fx / ∑f
+          </p>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Scores(x)</th>
+                <th>Frequency</th>
+                <th>fx</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>30</td>
+                <td>3</td>
+                <td>90</td>
+              </tr>
+              <tr>
+                <td>35</td>
+                <td>21</td>
+                <td>735</td>
+              </tr>
+              <tr>
+                <td>40</td>
+                <td>46</td>
+                <td>1840</td>
+              </tr>
+              <tr>
+                <td>45</td>
+                <td>18</td>
+                <td>810</td>
+              </tr>
+              <tr>
+                <td>50</td>
+                <td>12</td>
+                <td>600</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>∑f = 100</td>
+                <td>∑fx = 4075</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            Substituting <br />
+            Mean = 4075 / 100 <br />
+            = 40.75
+          </p>
+          <p>
+            2. The mean of the frequency distribution shown is 1.5. Find the
+            value of p
+          </p>
+          <table class="table table-striped table-bordered">
+            <tr>
+              <td>x - value</td>
+              <td>0</td>
+              <td>p</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Frequency</td>
+              <td>2</td>
+              <td>3</td>
+              <td>1</td>
+            </tr>
+          </table>
+          <p>
+            Solution: <br />
+            Mean = ∑fx / ∑f
+          </p>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>x - value</th>
+                <th>frequency(f)</th>
+                <th>fx</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>p</td>
+                <td>3</td>
+                <td>3p</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>1</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>∑f = 6</td>
+                <td>∑fx = 3 + 3p</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            Substituting <br />
+            1.5 = (3 + 3p) / 6 <br />
+            Cross Multiply <br />
+            1.5 X 6 = 3 + 3p <br />
+            9 = 3 + 3p <br />
+            Collect like terms <br />
+            9 - 3 = 3p <br />
+            6 = 3p <br />
+            Divide both sides by 3 <br />
+            6/3 = (3p)/3 <br />
+            Thus, p = 2
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Median
+          </h4>
+          <p>
+            The median of a set of numbers arranged in an array is the middle
+            number (if their total number is odd) or the arithmetic mean of two
+            middle numbers (if the number of the given values is even). Median
+            divides the data into two equal parts.
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Examples:
+          </h4>
+          <p>
+            1. Find the median of the following numbers <br />
+            6, 1, 0, 3, 10, 2, 5
+          </p>
+          <p>
+            Solution: <br />
+            Arranging the value in the array in ascending order <br />
+            0, 1, 2, 3, 5, 6, 10 <br />The given values is odd, thus the median
+            = 3 (middle)
+          </p>
+          <p>
+            2. What is the median of the following scores <br />
+            22, 41, 35, 63, 82, 74?
+          </p>
+          <p>
+            Solution: <br />First, we arrange the given data in descending order
+            <br />
+            82, 74, 63, 41, 35, 22 <br />
+            Since there are 6 scores (even) <br />
+            Mean = (63 + 41) / 2 (Arithmetic mean of the two middle values)
+            <br />
+            = 52
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Median (frequency distribution)
+          </h4>
+          <p>
+            To get median for frequency data, we apply the idea of odd and even
+            numbers to get the median class or column among other columns or
+            classes. The two ways of getting our Median Class or Column are:
+            <br />(a) Median class (column) = ∑f /2 if ∑f is EVEN <br />
+            (b) Median class (column) = (∑f + 1) / 2 if ∑f is ODD <br />After we
+            have gotten our median class, then keep adding the frequency of the
+            given data till we get to the class or column where our number falls
+            in - that position is our median.
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Examples:
+          </h4>
+          <p>
+            1. A number of families were asked how many children they had. The
+            results are as follows:
+          </p>
+          <table class="table table-striped table-bordered">
+            <tr>
+              <td>No. of children</td>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+              <td>4</td>
+              <td>5</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>Frequency</td>
+              <td>10</td>
+              <td>15</td>
+              <td>8</td>
+              <td>6</td>
+              <td>4</td>
+              <td>7</td>
+            </tr>
+          </table>
+          <p>Calculate the median</p>
+          <p>
+            Solutin: <br />
+            ∑f = 10 + 15 + 8 + 6 + 4 + 7 = 50 (is even) <br />
+            Median Class = ∑f/2 = 50/2 = 25<sup>th</sup> class <br />Adding
+            frequency cummulatively till we get to 25<sup>th</sup> class
+          </p>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>No. of children</th>
+                <th>frequency</th>
+                <th>cummulative frequency</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>10</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>15</td>
+                <td>10 + 15 = 25</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>8</td>
+                <td>25 + 8 = 33</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>6</td>
+                <td>33 + 6 = 39</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>4</td>
+                <td>39 + 4 = 43</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>7</td>
+                <td>43 + 7 = 50</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            So 25<sup>th</sup> class: 10 + 15 = 25 i.e 2<sup>nd</sup> row of the
+            table above <br />
+            Thus Median = 2
+          </p>
+          <p>
+            2. The table shows the scores obtained when a fair die was thrown a
+            number of times
+          </p>
+          <table class="table table-striped table-bordered">
+            <tr>
+              <td>Scores</td>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+              <td>4</td>
+              <td>5</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>Frequency</td>
+              <td>2</td>
+              <td>5</td>
+              <td>x</td>
+              <td>11</td>
+              <td>9</td>
+              <td>10</td>
+            </tr>
+          </table>
+          <p>
+            If the probability of obtaining a 3 is 0.26, <br />find the median
+          </p>
+          <p>
+            Solution: <br />First, we find x by principle of probability <br />
+            Prob of 3 = <span style="font-style: italic">fre</span>(3) / ∑f
+            <br />
+            0.26 = x / (2 + 5 + x + 11 + 9 + 10) <br />
+            0.26 = x / (37 + x) <br />
+            Cross Multiply <br />
+            0.26(37 + x) = x <br />
+            Opening bracket <br />
+            9.62 + 0.26x = x <br />
+            Collect like terms <br />
+            9.62 = 1x - 0.26x <br />9.62 = 0.74x <br />Divide both sides by 0.74
+            <br />(9.62/0.74) = 0.74x/0.74 <br />
+            x = 13 <br />
+            Median Working: <br />
+            ∑f = 2 + 5 + 13 + 11 + 9 + 10 = 50 (which is even) <br />Median
+            Class = ∑f /2 = 50 / 2 = 25<sup>th</sup> class <br />
+            Adding frequency cummulatively till we get to 25<sup>th</sup> class:
+          </p>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>scores</th>
+                <th>frequency</th>
+                <th>cummulative frequency</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>5</td>
+                <td>2 + 5 = 7</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>13</td>
+                <td>7 + 13 = 20</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>11</td>
+                <td>20 + 11 = 31</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>9</td>
+                <td>31 + 9 = 40</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>10</td>
+                <td>40 + 10 = 50</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            So, 20 + 11 i.e 4<sup>th</sup> row of the table above <br />Thus,
+            median = 4
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Mode
+          </h4>
+          <p>
+            The mode of a set of numbers is that value which occurs with
+            greatest frequency, i.e. it is the most common value
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Examples:
+          </h4>
+          <p>
+            1. What is the mode of the scores below: <br />
+            1, 2, 3, 4, 4, 5, 5, 5, 4, 2, 2, 3, 4, 5, 5, 6
+          </p>
+          <p>Solution: <br />Mode = 5 (it occurred most)</p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Mode of frequency distribution
+          </h4>
+          <p>2. Determine the mode of the distribution below</p>
+          <table class="table table-striped table-bordered">
+            <tr>
+              <td>x</td>
+              <td>2</td>
+              <td>6</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>f</td>
+              <td>5</td>
+              <td>10</td>
+              <td>9</td>
+            </tr>
+          </table>
+          <p>
+            Solution: <br />
+            Mode = 6 (it has highest frequency of 10)
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Measures of Spread (variation/dispersion)
+          </h4>
+          <p>
+            This is the degree to which data are scattered (dispersed) about its
+            average value. The several measures of spread are the range, mead
+            deviation, inter quartile range, variance and standard deviation.
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Range
+          </h4>
+          <p>
+            This is the simpliest measure of dispersion and it is defined as the
+            difference between the largest ans smallest numbers in the set.
+            <br />
+            Note that: Range is a poor measure of spread as it uses only two
+            extreme values
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Examples:
+          </h4>
+          <p>
+            1. The ages of 10 students in a class are: <br />
+            15, 16, 15.5, 17, 14.9, 14.5, 14.1, 15.1, 15.2, 14.8 <br />Find the
+            range of their ages.
+          </p>
+          <p>
+            Solution: <br />Range = biggest number - smallest number <br />17 -
+            14.1 <br />= 2.9
+          </p>
+          <p>
+            2. A group of numbers are written in ascending order of magnitude as
+            (x - 2), 8, (5 + x), 12, (x + 14). Find the range of the number.
+          </p>
+          <p>
+            Solution: <br />Range = biggest number - smallest number <br />
+            = (x + 14) - (x - 2) <br />In ascending order, the first number is
+            the smallest while the last one is the biggest <br />
+            = x + 14 - x + 2 <br />
+            = 16
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Mean Deviation (M.D)
+          </h4>
+          <p>
+            The mean deviation of a set of n numbers x<sub>1</sub>, x<sub
+              >2</sub
+            >
+            ... x<sub>n</sub> is defined as: <br />
+            M.D = (∑|x - <span style="text-decoration: overline">x</span>|)/n
+            <br />Where <span style="text-decoration: overline">x</span> is the
+            mean of the numbers and |x -
+            <span style="text-decoration: overline">x</span>| is the absolute
+            value of the deviation if x from (<span
+              style="text-decoration: overline"
+              >x</span
+            >) and n is the number of digits given.
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Examples:
+          </h4>
+          <p>1. Find the mean deviation of 2, 4, 6, 5 and 3</p>
+          <p>
+            Solution: <br />Mean deviation = (∑|x -
+            <span style="text-decoration: overline">x</span>|)/n <br />
+            But <span style="text-decoration: overline">x</span> is mean and
+            here mean = (2 + 4 + 6 + 5 + 3 )/5 <br />= 4
+          </p>
+          <table class="table table-bordered">
+            Mean deviation table
+            <thead>
+              <tr>
+                <th>x</th>
+                <th>x - <span style="text-decoration: overline">x</span></th>
+                <th>|x - <span style="text-decoration: overline">x</span>|</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2</td>
+                <td>-2</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>2</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>-1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td>
+                  ∑|x - <span style="text-decoration: overline">x</span>| = 6
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>M.D = 6/5 = 1.2</p>
+          <p>
+            2. Calculate the mean deviation of the numbers <br />
+            0, -1, -3, -4, 5, 1
+          </p>
+          <p>
+            Solution: <br />Mean deviation = (∑|x -
+            <span style="text-decoration: overline">x</span>|)/n <br />
+            But <span style="text-decoration: overline">x</span> is mean and
+            here mean = (0 + (-1) + (-3) + 4 + 5 + 1)/6 = 6/6 = 1
+          </p>
+          <table class="table table-bordered">
+            Mean deviation table
+            <thead>
+              <tr>
+                <th>x</th>
+                <th>x - <span style="text-decoration: overline">x</span></th>
+                <th>|x - <span style="text-decoration: overline">x</span>|</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0</td>
+                <td>-1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>-1</td>
+                <td>-2</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>-3</td>
+                <td>-4</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>3</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>4</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td>
+                  ∑|x - <span style="text-decoration: overline">x</span>| = 14
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>M.D = 14/6 = 2.33</p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Mean Deviation (frequency distribution)
+          </h4>
+          <p>
+            If x<sub>1</sub>, x<sub>2</sub> ... x<sub>k</sub> occur with
+            frequency f<sub>1</sub>, f<sub>2</sub> ... f<sub>k</sub> then the
+            mean deviation is given by <br />
+            Mean Deviation = (∑f|x -
+            <span style="text-decoration: overline">x</span>|)/∑f where
+            <span style="text-decoration: overline">x</span> is mean
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Example:
+          </h4>
+          <table class="table table-striped table-bordered">
+            <tr>
+              <td>Scores</td>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+              <td>4</td>
+              <td>5</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>Frequency</td>
+              <td>2</td>
+              <td>5</td>
+              <td>13</td>
+              <td>11</td>
+              <td>9</td>
+              <td>10</td>
+            </tr>
+          </table>
+          <p>
+            The table shows the distribution of outcomes when a die is thrown 50
+            times. Calculate the Mean Deviation
+          </p>
+          <p>
+            Solution: <br />
+            Mean Deviation = (∑f|x -
+            <span style="text-decoration: overline">x</span>|)/∑f where
+            <span style="text-decoration: overline">x</span> is mean <br />
+            <span style="text-decoration: overline">x</span> = ∑fx/∑f = (1X2 +
+            2X5 + 3X13 + 4X11 + 5X9 + 6X10)/50 <br />
+            = 200/50 = 4
+          </p>
+          <table class="table table-bordered">
+            Mean deviation table
+            <thead>
+              <tr>
+                <th>x</th>
+                <th>x - <span style="text-decoration: overline">x</span></th>
+                <th>|x - <span style="text-decoration: overline">x</span>|</th>
+                <th>f</th>
+                <th>f|x - <span style="text-decoration: overline">x</span>|</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>-3</td>
+                <td>3</td>
+                <td>2</td>
+                <td>6</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>-2</td>
+                <td>2</td>
+                <td>5</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>-1</td>
+                <td>1</td>
+                <td>13</td>
+                <td>13</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td>11</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>1</td>
+                <td>1</td>
+                <td>9</td>
+                <td>9</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>2</td>
+                <td>2</td>
+                <td>10</td>
+                <td>20</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  ∑f|x - <span style="text-decoration: overline">x</span>| = 58
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>M.D = 58/50 = 1.16</p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Variance & Standard deviation
+          </h4>
+          <p>
+            The variance of a set of numbers x<sub>1</sub>, x<sub>2</sub> ...
+            x<sub>k</sub> is given as <br />
+            V = (∑(x -
+            <span style="text-decoration: overline">x</span>)<sup>2</sup>)/n
+            <br />Where V is the variance and (x -
+            <span style="text-decoration: overline">x</span>)<sup>2</sup> is the
+            square of the deviation from the mean while STANDARD DEVIATION is
+            square root of variance <br />
+            S.D = √(V) <br />
+            = √((∑(x -
+            <span style="text-decoration: overline">x</span>)<sup>2</sup>)/n)
+            <br />If the numbers x<sub>1</sub>, x<sub>2</sub> ... x<sub>k</sub>
+            occur with frequency f<sub>1</sub>, f<sub>2</sub> ... f<sub>k</sub>
+            respectively, then, <br />Variance, V = (∑f(x -
+            <span style="text-decoration: overline">x</span>)<sup>2</sup>)/∑f
+            <br />S.D = √((∑f(x -
+            <span style="text-decoration: overline">x</span>)<sup>2</sup>)/∑f)
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Examples:
+          </h4>
+          <p>
+            Find the variance and standard deviation of the set of numbers, 2,
+            5, 6, 3 and 4
+          </p>
+          <p>
+            Solution: <br />Variance = (∑(x -
+            <span style="text-decoration: overline">x</span>)<sup>2</sup>)/n
+            <br />But Mean = 20/5 = 4
+          </p>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>x</th>
+                <th>x - <span style="text-decoration: overline">x</span></th>
+                <th>
+                  (x - <span style="text-decoration: overline">x</span>)<sup
+                    >2</sup
+                  >
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2</td>
+                <td>-2</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>2</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>-1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td>
+                  ∑(x - <span style="text-decoration: overline">x</span>)<sup
+                    >2</sup
+                  >
+                  = 10
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            V = 10/5 = 2 <br />
+            S.D = √((∑(x -
+            <span style="text-decoration: overline">x</span>)<sup>2</sup>)/n)
+            <br />
+            √2 = 1.4
+          </p>
+          <p>
+            2. Calculate the varience and standard deviation of the frequency
+            distribution below
+          </p>
+          <table class="table table-striped table-bordered">
+            <tr>
+              <td>x</td>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+              <td>4</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>f</td>
+              <td>2</td>
+              <td>1</td>
+              <td>2</td>
+              <td>1</td>
+              <td>2</td>
+            </tr>
+          </table>
+          <p>
+            Solution: <br />
+            Variance = (∑f(x -
+            <span style="text-decoration: overline">x</span>)<sup>2</sup>)/∑f
+            <br />But Mean = (1X2 + 2X1 + 3X2 + 4X1 + 5X2)/(2 + 1 + 2 + 1 + 2)
+            <br />
+            = 24/8 = 3
+          </p>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>x</th>
+                <th>x - <span style="text-decoration: overline">x</span></th>
+                <th>
+                  (x - <span style="text-decoration: overline">x</span>)<sup
+                    >2</sup
+                  >
+                </th>
+                <th>f</th>
+                <th>
+                  f(x - <span style="text-decoration: overline">x</span>)<sup
+                    >2</sup
+                  >
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>-2</td>
+                <td>4</td>
+                <td>2</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>-1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>2</td>
+                <td>4</td>
+                <td>2</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  ∑f(x -
+                  <span style="text-decoration: overline">x</span>)<sup>2</sup>
+                  = 18
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            V = ∑f(x -
+            <span style="text-decoration: overline">x</span>)<sup>2</sup>/∑f
+            <br />
+            = 18/8 = 2.25 <br />
+            S.D = √V <br />
+            √2.25 = 1.5
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script></script>
+    <script src="general.js"></script>
+  </body>
+</html>

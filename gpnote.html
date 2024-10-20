@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GEOMETRIC PROGRESSION</title>
+    <!--Water.css styling-->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
+    /> -->
+    <!--Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="font-awesome3/css/all.css" />
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!--External CSS-->
+    <link rel="stylesheet" href="style.css" />
+
+    <script>
+      $(document).ready(function () {
+        $(".menu").hide();
+      });
+      $(document).ready(function () {
+        $(".menu-button").click(function () {
+          $(".menu").fadeToggle();
+        });
+      });
+
+      /*
+        $(document).ready(function () {
+          $(".showworkingsNth-Term").hide();
+        });
+        $(document).ready(function () {
+          $(".showNthWorking-button").click(function() {
+            $(".showworkingsNth-Term").fadeToggle();
+          });
+        });*/
+    </script>
+  </head>
+  <body>
+    <div id="loader" class="loader"></div>
+    <div id="content" class="hidden">
+      <div class="container-fluid">
+        <!--LAUTECH LOGO-->
+        <div class="container-line">
+          <img src="lau.png" alt="" />
+          <button class="menu-button" type="button" style="float: right">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="menu">
+            <div class="container-line">
+              <h4>For mathematical calculations</h4>
+              <p><a href="index.html">Geometric Progression (GP)</a></p>
+              <p><a href="ap_calc.html">Arithmetic Progression (AP)</a></p>
+              <p><a href="convert.html">Number Bases Converter</a></p>
+              <p><a href="statics_calc.html">Statistics</a></p>
+              <p><a href="set.html">Set</a></p>
+            </div>
+            <div>
+              <h4 style="text-decoration: underline">Some Notes</h4>
+              <p>
+                <a href="apnote.html">Note on Arithmetic Progression (AP)</a>
+              </p>
+              <p><a href="numberbasenote.html">Note on Number Bases</a></p>
+              <p><a href="statisticnote.html">Note on Statistics</a></p>
+            </div>
+          </div>
+          <div>
+            <span class="theme-go-back">
+              <button id="theme-toggle">
+                <span class="theme-icon" id="themeIcon"></span>
+              </button>
+              <a style="color: white" href="gpquiz.html">
+                <button>Attempt GP Quiz</button>
+              </a>
+            </span>
+          </div>
+        </div>
+        <div>
+          <h2 style="text-decoration: underline; font-weight: bolder">
+            Geometric Progression (GP)
+          </h2>
+          <p>
+            In Maths,
+            <span style="font-weight: bold">Geometric Progression (GP)</span> is
+            a type of sequence where each succeeding term is produced by
+            multiplying each preceding term by a fixed number, which is called a
+            common ratio. This progression is also known as a geometric sequence
+            of numbers that follow a pattern. The common ratio multiplied here
+            to each term to get the next term is a non-zero number. An example
+            of a Geometric sequence is 2, 4, 8, 16, 32, 64, …, where the common
+            ratio is 2.
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            What is a Geometric Progression?
+          </h4>
+          <p>
+            A <span style="font-weight: bold">geometric progression</span> is a
+            special type of progression where the successive terms bear a
+            constant ratio known as a common ratio. The next term of the
+            sequence is produced when we multiply a constant (which is non-zero)
+            to the preceding term. It is also commonly referred to as GP. The GP
+            is generally represented in form a, ar, ar<sup>2</sup> .... where
+            'a' is the first term and 'r' is the common ratio of the
+            progression. The common ratio can have both negative as well as
+            positive values. To find the terms of a geometric series, we only
+            need the first term and the constant ratio.
+            <img
+              style="width: 100%"
+              height="300vh"
+              src="gp/gp1.png"
+              alt="gp1"
+            />
+          </p>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Geometric Progression Formula
+          </h4>
+          <p>
+            Here are the formulas related to geometric progressions. Consider a
+            geometric progression a, ar, ar<sup>2</sup>, ar<sup>3</sup>, ...
+          </p>
+          <table class="table table-striped">
+            <tr>
+              <td>n<sup>th</sup> term</td>
+              <td>T<sub>n</sub> = ar<sup>(n - 1)</sup></td>
+            </tr>
+            <tr>
+              <td>Sum of the first n terms</td>
+              <td>
+                S<sub>n</sub> = a(r<sup>n</sup> - 1) / (r - 1) when r > 1 and
+                positive while <br />
+                S<sub>n</sub> = a(1 - r<sup>n</sup>) / (1 - r) when r < 1 and
+                negative
+              </td>
+            </tr>
+            <tr>
+              <td>Sum of infinite terms</td>
+              <td>S<sub>∞</sub> = a / (1 - r) when r < 1</td>
+            </tr>
+          </table>
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Solved Examples of Geometric Progression
+          </h4>
+          <p style="font-weight: 500">
+            Question 1: If the first term is 10 and the common ratio of a GP is
+            3, then write the first five terms of GP. <br />
+            Solution:
+          </p>
+          <p>
+            Given, <br />
+
+            First term, a = 10 <br />
+
+            Common ratio, r = 3 <br />
+
+            We know the general form of GP for first five terms is given by:
+            <br />
+
+            a, ar, ar<sup>2</sup>, ar<sup>3</sup>, ar<sup>4</sup> gotten from
+            the formula: T<sub>n</sub> = ar<sup>(n - 1)</sup> <br />
+
+            so; <br />
+
+            T<sub>1</sub> = a = 10 <br />
+
+            T<sub>2</sub> = ar = 10 × 3 = 30 <br />
+
+            T<sub>3</sub> = ar<sup>2</sup> = 10 × 32 = 10 × 9 = 90 <br />
+
+            T<sub>4</sub> = ar<sup>3</sup> = 10 × 33 = 270 <br />
+
+            T<sub>5</sub> = ar<sup>4</sup> = 10 × 34 = 810 <br />
+
+            Therefore, the first five terms of GP with 10 as the first term and
+            3 as the common ratio are: 10, 30, 90, 270 and 810
+          </p>
+          <p style="font-weight: 500">
+            Question 2: Find the sum of GP: 10, 30, 90, 270 and 810, using
+            formula. <br />
+            Solution:
+          </p>
+          <p>
+            Given GP is 10, 30, 90, 270 and 810 <br />
+
+            First term, a = 10 <br />
+
+            Common ratio, r = 30/10 = 3 > 1 <br />
+
+            Number of terms, n = 5 <br />
+
+            Sum of GP is given by; <br />
+
+            S<sub>n</sub> = a[(r<sup>n</sup> – 1)/(r – 1)] <br />
+
+            S<sub>5</sub> = 10[(3<sup>5</sup> – 1)/(3 – 1)] <br />
+
+            = 10[(243 – 1)/2] <br />
+
+            = 10[242/2] <br />
+
+            = 10 × 121 <br />
+
+            = 1210 <br />
+
+            Check: 10 + 30 + 90 + 270 + 810 = 1210
+          </p>
+
+          <h4
+            style="
+              text-decoration: underline;
+              font-weight: bold;
+              font-style: italic;
+            "
+          >
+            Exercise:
+          </h4>
+          <p>
+            1. The first term of a geometric progression is 3 and the common
+            ratio is 2. Find the 5th term. <br />
+            2. The first term of a geometric progression is 5 and the common
+            ratio is 3. Find the sum of the first 4 terms. <br />
+            3. The sum of the first 3 terms of a geometric progression is 28 and
+            the common ratio is 2. Find the first term. <br />
+            4. The sum of the first 5 terms of a geometric progression is 465
+            and the common ratio is 3. Find the first term. <br />
+            5. The sum of the first 4 terms of a geometric progression is 120
+            and the sum of the first 7 terms is 1080. Find the first term.
+            <br />
+            6. The sum of the first 3 terms of a geometric progression is 14 and
+            the sum of the first 6 terms is 254. Find the first term. <br />
+            7. The sum of the first 4 terms of a geometric progression is 30 and
+            the sum of the first 7 terms is 210. Find the common ratio. <br />
+            8. The sum of the first 5 terms of a geometric progression is 93 and
+            the sum of the first 8 terms is 465. Find the common ratio. <br />
+            9. The first term of a geometric progression is 2 and the sum of the
+            first 5 terms is 62. Find the common ratio. <br />
+            10. The first term of a geometric progression is 3 and the sum of
+            the first 6 terms is 364. Find the common ratio. <br />
+            11. The first term of a geometric progression is 5 and the sum of
+            the first 4 terms is 155. Find the common ratio. <br />
+            12. The first term of a geometric progression is 2 and the sum of
+            the first 7 terms is 254. Find the common ratio. <br />
+            13. The first term of a geometric progression is 3 and the sum of
+            the first 5 terms is 243. Find the common ratio. <br />
+            14. The first term of a geometric progression is 4 and the sum of
+            the first 6 terms is 508. Find the common ratio. <br />
+            15. The first term of a geometric progression is 2 and the sum of
+            the first 8 terms is 510. Find the common ratio. <br />
+            16. The first term of a geometric progression is 5 and the sum of
+            the first 7 terms is 1365. Find the common ratio. <br />
+            17. The first term of a geometric progression is 3 and the sum of
+            the first 6 terms is 819. Find the common ratio. <br />
+            18. The first term of a geometric progression is 4 and the sum of
+            the first 8 terms is 2044. Find the common ratio. <br />
+            19. The first term of a geometric progression is 2 and the sum of
+            the first 9 terms is 1022. Find the common ratio. <br />
+            20. The first term of a geometric progression is 6 and the sum of
+            the first 7 terms is 1806. Find the common ratio. <br />
+            21. Find the sum of the first 5 terms of a geometric progression
+            with a first term of 3 and a common ratio of 2. <br />
+            22. Calculate the sum of the first 8 terms of a geometric
+            progression with a first term of 5 and a common ratio of 3. <br />
+            23. Determine the sum of the first 10 terms of a geometric
+            progression with a first term of 4 and a common ratio of 2. <br />
+            24. Find the sum of the first 6 terms of a geometric progression
+            with a first term of 6 and a common ratio of 4. <br />
+            25. Calculate the sum of the first 12 terms of a geometric
+            progression with a first term of 2 and a common ratio of 5. <br />
+            26. Determine the sum of the first 15 terms of a geometric
+            progression with a first term of 7 and a common ratio of 3. <br />
+            27. Find the sum of the first 20 terms of a geometric progression
+            with a first term of 8 and a common ratio of 2. <br />
+            28. Calculate the sum of the first 25 terms of a geometric
+            progression with a first term of 10 and a common ratio of 4. <br />
+            29. Determine the sum of the first 30 terms of a geometric
+            progression with a first term of 12 and a common ratio of 3. <br />
+            30. Find the sum of the first 50 terms of a geometric progression
+            with a first term of 6 and a common ratio of 2. <br />
+            31. The first term of a geometric progression is 20 and the common
+            ratio is 4. Find the 5th term of the progression. <br />
+            32. The sum of the first three terms of a geometric progression is
+            21/2 and their product is 27. Find the common ratio of the
+            progression. <br />
+            33. Find the 5th term of the geometric progression: 1/7, 1/14, 1/28,
+            ... <br />
+            34. Find the sum of the geometric progression: 8/10, 8/100, 8/1000,
+            8/10000, ... to n terms. <br />
+            35. Find the sum of the infinite geometric progression: 12, 132,
+            1332, 13332, ... <br />
+            36. Find the sum of the infinite geometric progression with first
+            term 1/3 and common ratio -2/3. <br />
+            37. A liter of acid was poured out of a 10-liter vessel filled with
+            pure acid to the brim. If the concentration values after each
+            replacement form a geometric progression with the first term and
+            common ratio unknown, find the concentration values after the 1st,
+            2nd, 3rd replacements. <br />
+            38. The sum of the first three terms of a geometric progression is
+            21/2, and their product is 27. Determine the common ratio of the
+            progression and find the values of the terms. <br />
+            39. A ball is dropped from a height, and the distances traveled in
+            meters are 128/9, 32/3, 8, 6... Calculate the total distance the
+            ball will travel before coming to rest. <br />
+            40. The sum of an infinite geometric progression with positive terms
+            is 48, and the sum of its first two terms is 36. Find the second
+            term of the progression. <br />
+            41. The third term of a geometric progression is 360 and the sixth
+            term is 1215. Find: <br />
+            (a) the common ratio <br />
+            (b) the first term <br />
+            (c) the sum of the first four terms <br />
+            42. The difference between the third and first terms of a geometric
+            progression is 8, and the common ratio is 2. Find the first term.
+            <br />
+            43. The third term of a geometric progression is 10 and the sixth
+            term is 80. Find: <br />
+            (a) the common ratio <br />
+            (b) the first term <br />
+            (c) the sum of the first six terms <br />
+            44. The third and sixth terms of a geometric progression are 14 and
+            132 respectively. Find: <br />
+            (a) the first term and the common ratio <br />
+            (b) the sum of the first six terms <br />
+            45. The sum of the first three terms of a geometric progression is
+            21/2 and their product is 27. Find: <br />
+            (a) the common ratio <br />
+            (b) the values of the terms <br />
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="general.js"></script>
+  </body>
+</html>
