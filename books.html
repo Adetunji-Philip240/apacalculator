@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Books</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- AOS LINK -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <style>
+      /* For mobile BEGIN */
+      @media screen and (max-width: 767px) {
+        .col-sm-3 {
+          margin-top: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a style="float: right" class="p-3" href="index.html"
+      ><button type="button" class="btn btn-danger">Go Back</button></a
+    >
+
+    <div class="container text-center py-5">
+      <h2 class="font-weight-bolder">LIST OF BOOKS AVAILABLE</h2>
+      <div class="row mt-4">
+        <div class="col-sm-3">
+          <div
+            class="book bg-danger text-white p-4"
+            style="border-radius: 10px"
+          >
+            <h5 class="font-weight-bolder">Arithmetic Progression</h5>
+            <p class="mt-4">By Adetunji Adewale Philip</p>
+            <a href="./calc_and_notes/apnote.html">
+              <button type="button" class="btn btn-success">Read Now</button></a
+            >
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div
+            class="book bg-danger text-white p-4"
+            style="border-radius: 10px"
+          >
+            <h5 class="font-weight-bolder">Geometric Progression</h5>
+            <p class="mt-4">By Adetunji Adewale Philip</p>
+            <a href="./calc_and_notes/gpnote.html">
+              <button type="button" class="btn btn-success">Read Now</button></a
+            >
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div
+            class="book bg-danger text-white p-4"
+            style="border-radius: 10px"
+          >
+            <h5 class="font-weight-bolder">Statistics</h5>
+            <p class="mt-4">By Adetunji Adewale Philip</p>
+            <br />
+            <a href="./calc_and_notes/statisticnote.html">
+              <button type="button" class="btn btn-success">Read Now</button></a
+            >
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div
+            class="book bg-danger text-white p-4"
+            style="border-radius: 10px"
+          >
+            <h5 class="font-weight-bolder">Number Base System</h5>
+            <p class="mt-4">By Adetunji Adewale Philip</p>
+            <br />
+            <a href="./calc_and_notes/numberbasenote.html">
+              <button type="button" class="btn btn-success">Read Now</button></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AOS SCRIPT -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- INITIALIZE AOS -->
+    <script>
+      AOS.init();
+    </script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

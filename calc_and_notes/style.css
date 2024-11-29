@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+img {
+  width: 50vw;
+}
+h3 {
+  font-size: 6vw;
+  font-weight: bolder;
+}
+.container-line {
+  border-bottom: 5px solid;
+  border-color: black;
+  padding: 10px;
+}
+/* .whole-body {
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+} */
+.calculate:hover {
+  background-color: brown;
+  color: yellow;
+}
+a {
+  text-decoration: none;
+  color: rgb(145, 145, 142);
+}
+
+input {
+  padding: 8px;
+  margin-bottom: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.menu {
+  border-radius: 10px;
+  padding: 10px;
+}
+.menu-button {
+  border-radius: 20px;
+}
+.menu-button:hover {
+  color: yellow;
+  background-color: brown;
+  padding-left: 100px;
+}
+button {
+  border-radius: 30px;
+}
+.show-workings,
+.my-answers {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(165, 42, 42, 0.2);
+  border-style: double;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.theme-go-back {
+  font-size: 3vw;
+}
+
+/* For designing the theme */
+html.dark {
+  --primary-color: #333;
+  --text-color: #d7d7d7;
+  --button-color: brown;
+  --footer-background-color: #28282b;
+  --footer-p-color: #d7d7d7;
+}
+
+html.light {
+  --primary-color: #d7d7d7;
+  --text-color: black;
+  --button-color: brown;
+  --footer-background-color: #36454f;
+  --footer-p-color: white;
+}
+
+body {
+  background-color: var(--primary-color);
+
+  color: var(--text-color);
+
+  font-family: Poppins;
+  transition: background-color 300ms, color 300ms;
+}
+
+footer {
+  padding: 10px;
+  background-color: var(--footer-background-color);
+  color: var(--footer-p-color);
+}
+
+button {
+  border: none;
+  background-color: var(--button-color);
+  padding: 20px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+/*for desktop*/
+@media only screen and (min-width: 992px) {
+  label,
+  p {
+    font-size: 1.3vw;
+  }
+}
+
+/* Loader Styles */
+.loader {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid brown;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -20px;
+  margin-top: -20px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hide content initially */
+.hidden {
+  display: none;
+}
+
+.result {
+  margin-top: 20px;
+  display: none;
+}
+h4 {
+  font-weight: bold;
+}
