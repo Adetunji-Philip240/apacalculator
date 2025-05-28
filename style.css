@@ -130,6 +130,46 @@ nav a {
   border-radius: 8px; /* Optional: adds rounded corners */
 }
 
+.video-container {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.back {
+  background-image: url(./images/back.svg);
+  background-size: cover;
+  background-position: center;
+  padding: 50px;
+  margin-top: 100px;
+  border-radius: 10px;
+}
+
+.sub {
+  width: 40%;
+  padding: 10px;
+}
+
+.footer1 {
+  margin-top: 100px;
+  width: 100%;
+  background-color: rgb(238, 237, 236);
+  padding: 30px;
+}
+
+.footer1 li {
+  list-style: none;
+}
+.footer1 a {
+  text-decoration: none;
+  color: black;
+}
 /* For mobile BEGIN */
 @media screen and (max-width: 767px) {
   .nav-list a {
@@ -171,6 +211,12 @@ nav a {
   }
   .menu.active {
     display: flex;
+  }
+
+  .sub {
+    padding-right: 0;
+    width: 100%;
+    margin-bottom: 10px;
   }
 }
 
